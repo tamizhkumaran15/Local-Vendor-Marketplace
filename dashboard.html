@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css" />
+
+  <!-- Chart.js MUST load first -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="dash-header">
+    <h1>My Dashboard</h1>
+    <a href="index.html" class="back-btn">← Back</a>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- STATS -->
+    <section class="stats-grid">
+      <div class="stat-card blue">
+        <p>Total Orders</p>
+        <h2 id="statOrders">0</h2>
+      </div>
+
+      <div class="stat-card green">
+        <p>Payable</p>
+        <h2>₹<span id="statPayable">0</span></h2>
+      </div>
+
+      <div class="stat-card orange">
+        <p>Discount</p>
+        <h2>₹<span id="statDiscount">0</span></h2>
+      </div>
+
+      <div class="stat-card purple">
+        <p>Items Ordered</p>
+        <h2 id="statItems">0</h2>
+      </div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h3>Order Summary</h3>
+        <canvas id="summaryPie"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Order Activity</h3>
+        <canvas id="ordersBar"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- dashboard.js MUST be module -->
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

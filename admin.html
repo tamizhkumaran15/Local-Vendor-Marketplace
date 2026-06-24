@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+
+  <!-- Admin styles -->
+  <link rel="stylesheet" href="admin.css">
+
+  <!-- Chart.js (required for analytics) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="dash-header">
+    <h1>Admin Dashboard</h1>
+
+    <div class="mode-switch">
+     <button id="adminModeBtn" class="active">Admin Mode</button>
+     <button id="userModeBtn">User Mode</button>
+    </div>
+
+    <a href="index.html" class="back-btn">← Back</a>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="dashboard">
+
+    <!-- ===== STATS SUMMARY ===== -->
+    <section class="stats-grid">
+      <div class="stat-card blue">
+        <p>Total Orders</p>
+        <h2 id="statOrders">0</h2>
+      </div>
+
+      <div class="stat-card green">
+        <p>Total Revenue</p>
+        <h2>₹<span id="statRevenue">0</span></h2>
+      </div>
+
+      <div class="stat-card orange">
+        <p>Total Discount</p>
+        <h2>₹<span id="statDiscount">0</span></h2>
+      </div>
+
+      <div class="stat-card purple">
+        <p>Users Ordered</p>
+        <h2 id="statUsers">0</h2>
+      </div>
+    </section>
+
+    <!-- ===== ANALYTICS CHARTS ===== -->
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h3>Revenue Overview</h3>
+        <canvas id="adminPie"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Orders Timeline</h3>
+        <canvas id="adminBar"></canvas>
+      </div>
+    </section>
+
+    <!-- ===== FUTURE SECTIONS GO BELOW ===== -->
+    <!-- Admin Orders Table -->
+    <!-- Filters -->
+    <!-- Product Management -->
+    <!-- User Management -->
+    <!-- ================= ADMIN ORDERS ================= -->
+<section class="admin-orders">
+  <h3>All Orders</h3>
+
+  <div class="table-wrap">
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>User Email</th>
+          <th>Items</th>
+          <th>Total</th>
+          <th>Discount</th>
+          <th>Payable</th>
+          <th>Status</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+
+      <tbody id="adminOrdersBody">
+        <!-- Orders load here -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= PRODUCT LIST ================= -->
+<section class="admin-products-list">
+  <h3>Manage Products</h3>
+
+  <div class="table-wrap">
+    <table class="products-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Discount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="productsTableBody">
+        <!-- Products load here -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= ADD PRODUCT ================= -->
+<section class="admin-products">
+  <h3>Add New Product</h3>
+
+  <div class="product-form">
+    <input type="text" id="pName" placeholder="Product Name">
+    <input type="number" id="pPrice" placeholder="Price">
+    <input type="number" id="pDiscount" placeholder="Discount (optional)">
+    <input type="text" id="pImage" placeholder="Image URL">
+
+    <button id="addProductBtn">➕ Add Product</button>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Admin logic -->
+  <script type="module" src="admin.js"></script>
+
+</body>
+</html>

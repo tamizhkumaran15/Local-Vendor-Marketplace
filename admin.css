@@ -1,0 +1,147 @@
+@import url("my-orders.css");
+/* ================= ADMIN ORDERS TABLE ================= */
+
+.admin-orders {
+  margin-top: 40px;
+}
+
+.admin-orders h3 {
+  margin-bottom: 15px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+.orders-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.status-placed { background:#dbeafe; color:#1e40af; }
+.status-processing { background:#fde68a; color:#92400e; }
+.status-shipped { background:#bbf7d0; color:#166534; }
+.status-delivered { background:#dcfce7; color:#166534; }
+.status-cancelled { background:#fee2e2; color:#991b1b; }
+
+.status-select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ================= ADMIN PRODUCTS ================= */
+
+.admin-products {
+  margin-top: 40px;
+}
+
+.product-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.product-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.product-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= PRODUCTS TABLE ================= */
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.products-table th,
+.products-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.products-table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.products-table button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: #fff;
+}
+
+/* ===== MODE SWITCH ===== */
+.mode-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.mode-switch button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.mode-switch button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}

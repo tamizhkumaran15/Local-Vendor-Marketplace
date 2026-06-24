@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Vendor Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header>
+    <h1>Local Vendor Marketplace</h1>
+
+    <div class="header-actions">
+        <!-- ✅ Logged-in user email -->
+         <!-- ✅ My Orders link -->
+        <a href="my-orders.html" class="header-btn">My Orders</a>
+        <button id="detect-btn">Detect Location</button>
+        <span id="user-location" style="color:white; font-size:14px;"></span>
+        
+        <button id="cart-btn">
+            🛒 Cart (<span id="cart-count">0</span>)
+            Total: <span id="cart-total">₹0</span>
+        </button>
+        <!-- 👤 Profile Wrapper -->
+<div class="profile-wrapper">
+
+  <!-- Profile Button (Round) -->
+  <button id="profileBtn" class="profile-btn">
+    <div class="profile-avatar">👤</div>
+  </button>
+
+  <!-- Dropdown -->
+  <div id="profileMenu" class="profile-menu hidden">
+
+    <div id="profileEmail" class="profile-email">
+      user@email.com
+    </div>
+
+    <ul class="profile-list">
+      <li><a href="dashboard.html">📊 My Dashboard</a></li>
+      <li><a href="my-orders.html">🧾 My Orders</a></li>
+
+      <!-- 🔐 Admin only -->
+      <li id="adminProfileLink" class="hidden">
+      <a href="admin.html">🛠 Admin Dashboard</a>
+      </li>
+
+      <li><a href="contact.html">📞 Contact Us</a></li>
+      <li><a href="settings.html">⚙️ Settings</a></li>
+      <li class="divider"></li>
+      <li>
+        <button id="profileLogoutBtn" class="logout-link">🚪 Logout</button>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+    </div>
+</header>
+
+<section id="landingPage" class="hero">
+
+  <!-- Background image layer -->
+  <div class="hero-bg"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+
+    <button id="startBtn" class="hero-btn">
+      Start Shopping
+    </button>
+
+    <h2>Smart Local Shopping, Delivered Faster 🚀</h2>
+
+    <p>
+      Discover nearby supermarkets, compare prices, and get essentials
+      delivered from trusted local vendors.
+    </p>
+
+    <p>
+      Our AI-powered marketplace predicts demand, suggests trending products,
+      and ensures faster delivery from shops around you.
+    </p>
+
+    <p>
+      From daily groceries to festival essentials — everything you need is just one click away.
+    </p>
+
+    <div class="hero-features">
+      <span>📍 Hyperlocal Matching</span>
+      <span>🧠 AI Prediction</span>
+      <span>🌦️ Weather Smart</span>
+      <span>🎉 Festival Ready</span>
+      <span>⚡ Fast Delivery</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===============================
+     🏪 NEARBY VENDORS SECTION
+================================ -->
+<section id="vendorsPage" class="hidden">
+<button id="backHome" class="back-btn">⬅ Back to Home</button>
+  <h2 class="section-title">Nearby Vendors</h2>
+  <p class="section-desc">
+    Based on your current location, these nearby local shops can deliver to you.
+  </p>
+<!-- 🔍 Global Product Search -->
+<div class="global-search-wrapper">
+  <input
+    type="text"
+    id="globalSearch"
+    placeholder="Search products like bread, milk..."
+  />
+</div>
+
+  <div id="vendorList" class="vendor-container"></div>
+</section>
+
+<div id="cart-popup" class="cart-popup hidden">
+  <h3>Your Cart</h3>
+
+  <div id="cart-items"></div>
+
+  <hr>
+
+  <p>Total Discount: ₹<span id="discount-total">0</span></p>
+  <p><strong>Payable: ₹<span id="payable-total">0</span></strong></p>
+
+  <button class="checkout-btn">Checkout</button>
+</div>
+    <script src="cart.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("a8ZUkz4X8VyOQYz8J");  <!-- from EmailJS -->
+</script>
+<div id="adminUserBanner" class="admin-banner hidden">
+  👑 You are viewing the site as a customer
+  <a href="admin.html">Back to Admin</a>
+</div>
+</body>
+</html>

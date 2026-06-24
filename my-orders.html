@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Orders</title>
+  <link rel="stylesheet" href="my-orders.css" />
+</head>
+<body>
+
+  <header class="orders-header">
+    <h1>My Orders</h1>
+    <a href="index.html" class="back-btn">← Back to Shop</a>
+  </header>
+
+  <!-- ✅ Date Filter -->
+  <div style="max-width:900px; margin:20px auto;">
+    <input
+      type="date"
+      id="dateFilter"
+      style="padding:8px; border-radius:6px; border:1px solid #ccc;"
+    />
+  </div>
+
+  <main>
+    <div id="ordersList" class="orders-container">
+      <!-- Orders load here -->
+    </div>
+  </main>
+
+  <script type="module" src="my-orders.js"></script>
+</body>
+</html>
