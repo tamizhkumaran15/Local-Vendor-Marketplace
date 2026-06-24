@@ -16,43 +16,18 @@ Local Vendor Smart Marketplace is a web-based platform developed to connect loca
 * Google Maps Integration
 * Responsive User Interface
 
+## Live Demo
+
+🔗 https://localvendormarketplace.netlify.app/
+
 ## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
 * Firebase Firestore
-* Firebase Hosting
 * EmailJS
 * Google Maps API
-
-## Modules
-
-### Customer Module
-
-* Register/Login
-* Browse Products
-* Place Orders
-* View Orders
-
-### Vendor Module
-
-* Manage Products
-* View Orders
-* Update Product Details
-
-### Admin Module
-
-* Monitor Marketplace
-* Manage Vendors
-* Manage Products
-
-## Future Enhancements
-
-* Online Payment Integration
-* WhatsApp Notifications
-* AI Product Recommendations
-* Mobile Application Support
 
 ## Team Members
 
